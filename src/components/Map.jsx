@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, useMapEvents, Marker, Polyline, Polygon, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, useMapEvents, Marker, Polyline, Polygon, Popup, ZoomControl } from "react-leaflet";
 import L from "leaflet";
 import { generateFresnelEllipse } from "../utils/calculations";
 
@@ -25,8 +25,10 @@ const Map = ({ onClickMap, towers, links, onTowerClick, selectedLink, onLinkClic
     <MapContainer
       center={[28.6139, 77.2090]}
       zoom={6}
+      zoomControl={false}
       style={{ height: '100vh', width: '100%' }}
     >
+      <ZoomControl position="bottomleft" />
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -9,14 +9,14 @@ function LinkInfo({ link, towers, onDelete, onClose }) {
   if (!tower1 || !tower2) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-6 w-80 z-1000" style={{padding: "2px"}}>
-      <div className="flex justify-between items-center mb-6">
+    <div className="fixed bottom-4 right-4 bg-white text-black rounded-lg shadow-lg p-6 w-80 z-1000" style={{padding: "10px"}}>
+      <div className="flex justify-between items-center mb-6" style={{marginBottom: "10px"}}>
         <h3 className="text-lg font-bold">Link Information</h3>
-        <button onClick={onClose} className="text-gray-500 hover:text-gray-700 text-xl">✕</button>
+        <button onClick={onClose} className="text-gray-100 hover:text-gray-200 text-xl">✕</button>
       </div>
       
       <div className="space-y-3 text-sm">
-        <div className="bg-gray-50 px-4 py-3 rounded">
+        <div className="bg-gray-50 px-4 py-3 rounded" style={{marginBottom: "10px"}}>
           <div className="mb-2">
             <strong>From:</strong> {tower1.name}
           </div>
@@ -25,8 +25,8 @@ function LinkInfo({ link, towers, onDelete, onClose }) {
           </div>
         </div>
         
-        <div className="bg-blue-50 px-4 py-3 rounded">
-          <div className="mb-2">
+        <div className="bg-blue-50 px-4 py-3 rounded" style={{marginBottom: "10px"}}>
+          <div className="mb-2" >
             <strong>Distance:</strong> {(link.distance / 1000).toFixed(2)} km
           </div>
           <div>
